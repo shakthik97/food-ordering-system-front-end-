@@ -1,5 +1,6 @@
 import React from 'react'
 import "./Home.css"
+import MultiTremCarousel from './MultiItemCarousel'
 
 const Home = () => {
   return (
@@ -17,6 +18,13 @@ const Home = () => {
 
             </div>
 
+        </section>
+        <section className='p-10 lg:py-10 lg:px-20'>
+            <p className='text2xl font-semibold text-grey-400 py-3 pb-10'>Top Meals</p>
+            <MultiTremCarousel/>
+        </section>
+        <section>
+          <h1></h1>
         </section>
     </div>
   )
