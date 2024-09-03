@@ -1,6 +1,9 @@
 import React from 'react'
 import "./Home.css"
 import MultiTremCarousel from './MultiItemCarousel'
+import RestaurantCard from '../restaurant/RestaurantCard';
+
+const restaurant = [1,1,1,1,1,1,1,1];
 
 const Home = () => {
   return (
@@ -20,11 +23,14 @@ const Home = () => {
 
         </section>
         <section className='p-10 lg:py-10 lg:px-20'>
-            <p className='text2xl font-semibold text-grey-400 py-3 pb-10'>Top Meals</p>
+            <p className='text-2xl font-semibold text-gray-400 py-3 pb-10'>Top Meals</p>
             <MultiTremCarousel/>
         </section>
-        <section>
-          <h1></h1>
+        <section className='px-5 lg:px-20 pt-10'>
+          <h1 className='text-2xl font-semibold text-gray-400 pb-10'>Order From Out Handpicked Favourites</h1>
+          <div className='flex flex-wrap items-center justify-around gap-5 '>
+              {restaurant.map((item, index) => <RestaurantCard/>)}
+          </div>
         </section>
     </div>
   )
